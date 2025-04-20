@@ -37,6 +37,7 @@ class SecurityConfig(
                         "/webjars/**",
                         "/api/users/**",
                         "/api/chats/**",
+                        "/api/feedbacks/**",
                     ).permitAll()
                     .anyRequest().authenticated()
             }
