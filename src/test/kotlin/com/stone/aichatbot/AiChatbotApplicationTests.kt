@@ -9,5 +9,4 @@ class AiChatbotApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }
