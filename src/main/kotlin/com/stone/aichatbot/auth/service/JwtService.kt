@@ -2,6 +2,7 @@ package com.stone.aichatbot.auth.service
 
 import com.stone.aichatbot.auth.entity.User
 import com.stone.aichatbot.config.JwtConfig
+import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm
 import io.jsonwebtoken.security.Keys
@@ -20,7 +21,7 @@ class JwtService(
 
         return Jwts.builder()
             .setSubject(user.email)
-            .claim("id", user.id)
+            .claim("id", user.id!!.toString())
             .claim("role", user.role.name)
             .setIssuedAt(now)
             .setExpiration(expiration)
@@ -40,13 +41,15 @@ class JwtService(
         }
     }
 
-    fun getEmailFromToken(token: String): String {
-        val claims = Jwts.parserBuilder()
+    fun getClaimsFromToken(token: String): Claims {
+        return Jwts.parserBuilder()
             .setSigningKey(key)
             .build()
             .parseClaimsJws(token)
             .body
+    }
 
-        return claims.subject
+    fun getEmailFromToken(token: String): String {
+        return getClaimsFromToken(token).subject
     }
 } 

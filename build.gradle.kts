@@ -49,6 +49,12 @@ dependencies {
 
     implementation("com.querydsl:querydsl-jpa:5.1.0:jakarta")
     kapt("com.querydsl:querydsl-apt:5.1.0:jakarta")
+
+    implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
+    implementation("com.aallam.openai:openai-client:3.7.0")
+    implementation("io.ktor:ktor-client-cio:2.3.7")
+    implementation("io.projectreactor:reactor-core:3.5.11")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.7.3")
 }
 
 kotlin {
