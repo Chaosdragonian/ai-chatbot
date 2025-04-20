@@ -38,3 +38,6 @@ out/
 
 ### Kotlin ###
 .kotlin
+### build
+build
+bin
