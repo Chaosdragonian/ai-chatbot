@@ -34,7 +34,7 @@ class FeedbackService(
         val feedback = Feedback(
             userId = userId,
             chatId = request.chatId,
-            isPositive = request.isPositive,
+            isPositive = request.isPositive
         )
 
         val savedFeedback = feedbackRepository.save(feedback)
@@ -44,7 +44,7 @@ class FeedbackService(
             chatId = savedFeedback.chatId,
             isPositive = savedFeedback.isPositive,
             createdAt = savedFeedback.createdAt,
-            status = savedFeedback.status.name,
+            status = savedFeedback.status.name
         )
     }
 
@@ -84,7 +84,7 @@ class FeedbackService(
                 chatId = feedback.chatId,
                 isPositive = feedback.isPositive,
                 createdAt = feedback.createdAt,
-                status = feedback.status.name,
+                status = feedback.status.name
             )
         }
 
@@ -93,7 +93,7 @@ class FeedbackService(
             page = feedbacks.number,
             size = feedbacks.size,
             totalElements = feedbacks.totalElements,
-            totalPages = feedbacks.totalPages,
+            totalPages = feedbacks.totalPages
         )
     }
 
@@ -122,7 +122,7 @@ class FeedbackService(
             chatId = savedFeedback.chatId,
             isPositive = savedFeedback.isPositive,
             createdAt = savedFeedback.createdAt,
-            status = savedFeedback.status.name,
+            status = savedFeedback.status.name
         )
     }
-} 
+}

@@ -52,4 +52,4 @@ class JwtService(
     fun getEmailFromToken(token: String): String {
         return getClaimsFromToken(token).subject
     }
-} 
+}

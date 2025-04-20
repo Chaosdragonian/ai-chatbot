@@ -29,5 +29,5 @@ data class Feedback(
 
 enum class FeedbackStatus {
     PENDING,
-    RESOLVED
-} 
+    RESOLVED,
+}

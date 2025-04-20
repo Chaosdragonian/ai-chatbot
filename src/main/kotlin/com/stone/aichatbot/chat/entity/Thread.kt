@@ -25,4 +25,4 @@ class Thread(
     fun updateLastActivity() {
         lastActivityAt = LocalDateTime.now()
     }
-} 
+}

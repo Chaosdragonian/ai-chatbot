@@ -1,6 +1,5 @@
 package com.stone.aichatbot.exception
 
-
 sealed class UserException(
     override val message: String,
 ) : RuntimeException(message)

@@ -25,7 +25,7 @@ class JwtAuthenticationFilter(
     ) {
         val authHeader = request.getHeader("Authorization")
         logger.info("Authorization header: $authHeader")
-        
+
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             logger.info("No valid Authorization header found")
             filterChain.doFilter(request, response)
@@ -34,7 +34,7 @@ class JwtAuthenticationFilter(
 
         val jwt = authHeader.substring(7)
         logger.info("JWT token: $jwt")
-        
+
         if (!jwtService.validateToken(jwt)) {
             logger.warn("Invalid JWT token")
             filterChain.doFilter(request, response)

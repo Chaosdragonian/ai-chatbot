@@ -38,6 +38,7 @@ class SecurityConfig(
                         "/api/users/**",
                         "/api/chats/**",
                         "/api/feedbacks/**",
+                        "/api/reports/**"
                     ).permitAll()
                     .anyRequest().authenticated()
             }

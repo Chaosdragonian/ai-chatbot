@@ -21,4 +21,4 @@ data class UserInfo(
 data class LoginResult(
     val token: String,
     val user: UserInfo,
-) 
+)

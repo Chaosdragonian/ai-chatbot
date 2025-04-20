@@ -39,7 +39,7 @@ class ChatService(
             question = request.question,
             answer = answer,
             userId = userId,
-            thread = thread,
+            thread = thread
         )
 
         // Thread를 먼저 저장
@@ -56,7 +56,7 @@ class ChatService(
             id = savedChat.id!!,
             question = savedChat.question,
             answer = savedChat.answer.toString(),
-            createdAt = savedChat.createdAt,
+            createdAt = savedChat.createdAt
         )
     }
 
@@ -89,11 +89,11 @@ class ChatService(
                         id = chat.id!!,
                         question = chat.question,
                         answer = chat.answer.toString(),
-                        createdAt = chat.createdAt,
+                        createdAt = chat.createdAt
                     )
                 },
                 createdAt = thread.createdAt,
-                lastActivityAt = thread.lastActivityAt,
+                lastActivityAt = thread.lastActivityAt
             )
         }
 
@@ -102,7 +102,7 @@ class ChatService(
             page = threads.number,
             size = threads.size,
             totalElements = threads.totalElements,
-            totalPages = threads.totalPages,
+            totalPages = threads.totalPages
         )
     }
 

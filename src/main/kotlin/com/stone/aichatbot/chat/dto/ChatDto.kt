@@ -28,4 +28,4 @@ data class ChatListResponse(
     val size: Int,
     val totalElements: Long,
     val totalPages: Int,
-) 
+)

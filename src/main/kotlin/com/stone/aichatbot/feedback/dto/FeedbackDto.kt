@@ -26,4 +26,4 @@ data class FeedbackListResponse(
 
 data class FeedbackStatusUpdateRequest(
     val status: String,
-) 
+)

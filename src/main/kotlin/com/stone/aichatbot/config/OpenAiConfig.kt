@@ -26,7 +26,7 @@ class OpenAiConfig {
         logger.info("Initializing OpenAI client with model: $model")
         logger.info("OpenAI API Key: $apiKey")
         val config = OpenAIConfig(
-            token = apiKey,
+            token = apiKey
         )
         return OpenAI(config)
     }
